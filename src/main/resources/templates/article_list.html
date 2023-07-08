@@ -1,0 +1,11 @@
+<table>
+    <tr th:each="article : ${articleList}">
+        <td>
+            <!-- @{| 문자열 ${} |}-->
+            <a th:href="@{|/article/detail/${article.id}|}" th:text="${article.title}"></a>
+        </td>
+        <td th:text="${article.content}">"</td>
+    </tr>
+</table>
+
+<a th:href="@{/article/create}" >글생성</a>
